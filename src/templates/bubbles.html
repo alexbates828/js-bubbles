@@ -4,7 +4,8 @@
         <h2>You are now at the bubbles page! Go ahead and click on the bubbles!</h2>
         <script src="{{ url_for('static', filename='bubblefunctions.js') }}"></script>
         <svg width="400" height="400">
-            <circle cx="200" cy="200" r="20" stroke="black" id="circle" onclick="drawnewcircle();"></circle>
+            <circle cx="200" cy="200" r="20" stroke="black" id="circle" onclick="handleClickedBubble();"></circle>
         </svg>
+        <h3 id="scoreView"></h3>
     </body>
 </html>

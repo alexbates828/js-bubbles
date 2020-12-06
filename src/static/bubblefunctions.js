@@ -1,3 +1,11 @@
+var score = 0;
+
+function handleClickedBubble() {
+    updateScore();
+    updateScoreView();
+    drawnewcircle();
+}
+
 function drawnewcircle() {
     console.log("drawing new circle");
     let circle = document.getElementById("circle");
@@ -31,4 +39,13 @@ function getRandomColor() {
         "brown"
     ];
     return availableColors[getRandomNumberUpTo(availableColors.length)];
+}
+
+function updateScore() {
+    score++
+}
+
+function updateScoreView() {
+    let scoreView = document.getElementById("scoreView")
+    scoreView.innerText = "Your Score: " + score
 }
